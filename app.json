@@ -1,55 +1,55 @@
 {
   "expo": {
-    "name": "The Club",
+    "name": "The Club Mobile",
     "slug": "the-club-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.theclub.mobile",
-      "infoPlist": {
-        "NSCameraUsageDescription": "This app uses the camera for profile photos and face authentication.",
-        "NSMicrophoneUsageDescription": "This app uses the microphone for video calls.",
-        "NSLocationWhenInUseUsageDescription": "This app uses location to find nearby hosts.",
-        "NSFaceIDUsageDescription": "This app uses Face ID for secure authentication."
-      }
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#000000"
-      },
-      "package": "com.theclub.mobile",
-      "permissions": [
-        "CAMERA",
-        "RECORD_AUDIO",
-        "ACCESS_FINE_LOCATION",
-        "ACCESS_COARSE_LOCATION",
-        "USE_FINGERPRINT",
-        "USE_BIOMETRIC"
-      ]
+        "backgroundColor": "#ffffff"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "output": "static"
     },
+    "scheme": "the-club-mobile",
     "plugins": [
-      "expo-camera",
-      "expo-face-detector",
-      "expo-location",
+      "expo-router",
       [
-        "expo-image-picker",
+        "expo-camera",
         {
-          "photosPermission": "The app accesses your photos to let you share them with other users."
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
       ]
     ]
