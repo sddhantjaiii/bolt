@@ -45,7 +45,7 @@
     "axios": "^1.7.7",
     "react-native-keychain": "^8.2.0",
     "react-native-biometrics": "^3.0.1",
-    "react-native-image-resizer": "^4.0.0",
+    "react-native-image-resizer": "^3.0.1",
     "react-native-uuid": "^2.0.2",
     "socket.io-client": "^4.8.1",
     "lucide-react-native": "^0.468.0"
